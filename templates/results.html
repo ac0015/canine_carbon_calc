@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+  <head>
+      <title>Results</title>
+      <style>
+          .overlay {
+              background-color: white;
+              background: rgba(213,215,138,0.85);
+              position: relative;
+              margin: 0 auto;
+              height: 100%;
+              width: 60%;
+              padding: 20px;
+          }
+	 .links {
+	      position: absolute;
+              right: 2%;
+              width: 12%;
+              height: 4%;
+         }
+          
+          form, body, input {
+              font-family: "Cambria";
+              position: relative;
+              text-align: center;
+          }
+          
+          body {
+              background-image: url("{% static "canine_calc/puppy-bg.png" %}");
+              background-repeat: no-repeat;
+              background-attachment: fixed;
+              background-position: center;
+              background-size: 100% 100%;
+          }
+      </style>      
+  </head>
+  <body>
+      <div class='overlay'>
+          <h1>Official Carbon Pawprint Report!</h1>
+		<img src="{% get_static_prefix %}{{ plot }}">
+      </div>
+   </body>
+</html>
